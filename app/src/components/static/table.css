@@ -1,0 +1,32 @@
+table.table thead tr th {
+	background-color: #E46A68;
+}
+
+table.table td, table.table th {
+	color: #FFFFFF;
+	padding: 10px 15px;
+}
+
+table.table th img {
+	margin-bottom: 3px;
+}
+
+table.table td form {
+	display: inline;
+	position: absolute;
+}
+
+table.table td form input {
+	background-color: transparent;
+	border: 0;
+	padding: 0px 5px;
+	width: 50px;
+	color: #FFFFFF;
+	font-size: 1em;
+	margin: 0;
+	border-bottom: 1px solid #6E6E6E;
+}
+
+table.table td form input:focus {
+	outline: none;
+}
