@@ -21,7 +21,7 @@ class Days extends React.Component {
 	updateMonthProfit() {
 		var profit = 0;
 		setTimeout(() => {
-			axios.get('http://localhost:8000/get-days/' + this.props.journal.id + '/').then(res => {
+			axios.get('https://my-journals-server.herokuapp.com/get-days/' + this.props.journal.id + '/').then(res => {
 				for (let days in res.data) {
 					profit += res.data[days].profit - res.data[days].loss
 				}
@@ -32,7 +32,7 @@ class Days extends React.Component {
 	componentDidMount() {
 		var profit = 0;
 		setTimeout(() => {
-			axios.get('http://localhost:8000/get-days/' + this.props.journal.id + '/').then(res => {
+			axios.get('https://my-journals-server.herokuapp.com/get-days/' + this.props.journal.id + '/').then(res => {
 				for (let days in res.data) {
 					profit += res.data[days].profit - res.data[days].loss
 				}

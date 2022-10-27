@@ -31,7 +31,7 @@ class Register extends React.Component {
 			this.setState({ username: e.target.value, error: false })
 			setTimeout(() => {
 				form.append('username', this.state.username)
-				axios.post('http://localhost:8000/form-validation/validate-username/', form).then(res => {
+				axios.post('https://my-journals-server.herokuapp.com/form-validation/validate-username/', form).then(res => {
 					if (res.data === true) {
 						this.setState({ username_error: true })
 					} else {
@@ -63,7 +63,7 @@ class Register extends React.Component {
 		const form = new FormData();
 		form.append('username', this.state.username)
 		form.append('password', this.state.password)
-		axios.post('http://localhost:8000/auth/register/', form).then(res => {
+		axios.post('https://my-journals-server.herokuapp.com/auth/register/', form).then(res => {
 			if (res.data === false) {
 				this.setState({ error: true })
 			} else {

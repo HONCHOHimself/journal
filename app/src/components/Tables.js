@@ -14,9 +14,9 @@ class Tables extends React.Component {
 		}
 	}
 	componentDidMount() {
-		axios.get('http://localhost:8000/add-journal/' + localStorage.getItem('token') + '/')
+		axios.get('https://my-journals-server.herokuapp.com/add-journal/' + localStorage.getItem('token') + '/')
 		setTimeout(() => {
-			axios.get('http://localhost:8000/get-journals/' + localStorage.getItem('token') + '/').then(res => {
+			axios.get('https://my-journals-server.herokuapp.com/get-journals/' + localStorage.getItem('token') + '/').then(res => {
 				this.setState({ journals: res.data })
 			})
 		}, 1000)

@@ -33,7 +33,7 @@ class Profit extends React.Component {
 		const FormData = require('form-data');
 		const form = new FormData();
 		form.append('profit', this.state.profit)
-		axios.post('http://localhost:8000/update-day-profit/' + this.props.day.id + '/', form).then(res => {
+		axios.post('https://my-journals-server.herokuapp.com/update-day-profit/' + this.props.day.id + '/', form).then(res => {
 			if (res.data === true) {
 				this.setState({ edit_mode: false })
 				this.props.updateMonthProfit()

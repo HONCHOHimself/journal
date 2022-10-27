@@ -34,7 +34,7 @@ class Login extends React.Component {
 		const form = new FormData();
 		form.append('username', this.state.username)
 		form.append('password', this.state.password)
-		axios.post('http://localhost:8000/auth/login/', form).then(res => {
+		axios.post('https://my-journals-server.herokuapp.com/auth/login/', form).then(res => {
 			if (res.data === false) {
 				this.setState({ error: true })
 			} else {

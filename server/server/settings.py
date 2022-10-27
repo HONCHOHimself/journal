@@ -39,7 +39,7 @@ SECURE_HSTS_PRELOAD = True
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['my-journals-server.herokuapp.com']
 
 
 # Application definition
