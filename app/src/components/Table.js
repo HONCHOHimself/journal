@@ -18,7 +18,7 @@ class Table extends React.Component {
 	componentDidMount() {
 		axios.get('https://my-journals-server.herokuapp.com/add-journal-day/' + localStorage.getItem('token') + '/' + this.props.journal.id + '/')
 		setTimeout(() => {
-			axios.get('http://localhost:8000/get-days/' + this.props.journal.id + '/').then(res => {
+			axios.get('https://my-journals-server.herokuapp.com/get-days/' + this.props.journal.id + '/').then(res => {
 				this.setState({ days: res.data })
 			})
 		}, 1000)
